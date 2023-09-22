@@ -1,0 +1,83 @@
+---
+title: "Challenge-6"
+author: "Misra Anandita"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Questions
+<br>
+
+#### Question-1: Countdown Blastoff (While Loop)
+
+Create a program that simulates a rocket launch countdown using a while loop. Start from 10 and countdown to "Blastoff!" with a one-second delay between each countdown number. Print a message when the rocket launches.
+
+**Hint:** You may want to use `cat` command to print the countdown and `Sys.sleep` for incorporating the delay
+
+**Output preview:** Here is how the countdown could look like 
+
+```{r, out.height= "20px",out.width= "200px",echo=TRUE}
+
+```
+
+```{r, out.height= "20px",out.width= "200px",echo=FALSE}
+
+
+```
+
+**Solutions:**
+
+```{r, eval=T,echo=TRUE}
+# Enter code here
+Countdown<- function(countdown_number){
+  if(countdown_number>0){
+    cat(countdown_number, "seconds left...") 
+    Sys.sleep(1)
+  } else{
+    cat("Blastoff!\n")
+  }
+}
+
+countdown_time<- 10
+
+while(countdown_time>=0){
+  Countdown(countdown_time)
+  countdown_time <- countdown_time - 1
+}
+
+cat("The rocket has launched!\n")
+
+```
+<br>
+
+#### Question-2: Word Reverser (for Loop)
+
+Develop a program that takes a user-entered word and uses a while loop to print the word's characters in reverse order. For example, if the user enters "hello," the program should print "olleh."
+
+**Hint:** You may want to use `substr` command to access each character of the input word, and `paste` command to join the reversed letters one at a time
+
+**Solutions:** 
+
+```{r, eval=T,echo=TRUE}
+# Enter code here
+reverse_the_word<- function(word_input){
+  reversed_word <- ""
+  i<- nchar(word_input)
+  while (i>0) {
+    reversed_word<- paste(reversed_word, substr(word_input, i,i))
+    i<- i-1
+  }
+  return(reversed_word)
+}
+ 
+user_input_word<- readline(prompt = "Enter your word- ")
+
+Word_Reversed<-reverse_the_word(user_input_word)
+
+cat("This is your word in reverse:", Word_Reversed, "\n")
+```
+<br>
