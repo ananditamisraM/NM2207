@@ -1,0 +1,391 @@
+---
+title: "Week-7- Challenge"
+author: "Misra Anandita"
+date: "`r Sys.Date()`"
+output:
+  html_document: null
+  df_print: paged
+  pdf_document: default
+  word_document: default
+pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Part1- ggplot
+#Loading packagaes and getting a glimpse of the data
+
+```{r, eval=TRUE,echo=TRUE}
+# Load package tidyverse
+library(tidyverse)
+# Load package Palmer Penguins 
+library(palmerpenguins)
+# Get a glimpse of the dataset 
+glimpse(penguins)
+```
+
+#Palmer Penguins:Plot Recreation 
+
+```{r, eval=TRUE,echo=TRUE}
+# Step1- Starting with penguins dataframe
+ggplot(data = penguins)
+
+# Step2- Mapping bill depth to the x-axis
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm))
+
+# Step3- Mapping bill length to the y-axis
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm,
+                     y = bill_length_mm))
+# Step4- Adding points to represent the observations 
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm,
+y = bill_length_mm)) +
+geom_point(shape = "star")
+
+#Step5- Using different colours of points to represent different species
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm,
+y = bill_length_mm,
+colour = species)) +
+geom_point()
+
+#Step6- Adding a title to the plot 
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm,
+                     y = bill_length_mm,
+                     colour = species)) +
+  geom_point() +
+  labs(title = "Bill depth and length")
+
+#Step7- Adding a subtitle 
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm,
+                     y = bill_length_mm,
+                     colour = species)) +
+  geom_point() +
+  labs(title = "Bill depth and length",
+subtitle = "Dimensions for Adelie,
+Chinstrap, and Gentoo Penguins")
+
+#Step8- Labeling the axes
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm,
+                     y = bill_length_mm,
+                     colour = species)) +
+  geom_point() +
+  labs(title = "Bill depth and length",
+subtitle = "Dimensions for Adelie,
+Chinstrap, and Gentoo Penguins", x = "Bill depth (mm)",
+       y = "Bill length (mm)")
+
+#Step9- Adding a title for the legend
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm,
+                     y = bill_length_mm,
+                     colour = species)) +
+  geom_point() +
+  labs(title = "Bill depth and length",
+subtitle = "Dimensions for Adelie,
+Chinstrap, and Gentoo Penguins", x = "Bill depth (mm)",
+       y = "Bill length (mm)",  colour = "Species")
+
+#Step10- Adding the data source through the caption
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm,
+                     y = bill_length_mm,
+                     colour = species)) +
+  geom_point() +
+  labs(title = "Bill depth and length",
+subtitle = "Dimensions for Adelie,
+Chinstrap, and Gentoo Penguins", x = "Bill depth (mm)",
+       y = "Bill length (mm)",  colour = "Species", caption = "Source: Palmer Station LTER/palmerpenguins package")
+
+#Step11- Changing the colors of the points to cater to color-blindness
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm,
+                     y = bill_length_mm,
+                     colour = species)) +
+  geom_point() +
+  labs(title = "Bill depth and length",
+subtitle = "Dimensions for Adelie,
+Chinstrap, and Gentoo Penguins", x = "Bill depth (mm)",
+       y = "Bill length (mm)",  colour = "Species", caption = "Source: Palmer Station LTER/palmerpenguins package") + 
+   scale_colour_viridis_d()
+
+```
+
+#Palmer Penguins:Plot Recreation- Alternative ways
+
+```{r, eval=TRUE,echo=TRUE}
+# Alternative ways to get the same plot
+
+#Removing keywords
+ggplot(penguins,
+       aes(x = bill_depth_mm,
+         y = bill_length_mm,
+         colour = species)) +
+geom_point() +
+scale_colour_viridis_d()
+
+#Aesthetics layer outside the ggplot function
+ggplot(penguins) + 
+  aes(x = bill_depth_mm,
+      y = bill_length_mm,
+      colour = species) +
+  geom_point() + 
+  scale_colour_viridis_d()
+
+```
+
+#Aesthetics
+
+```{r, eval=TRUE,echo=TRUE}
+#Colour: Species
+ggplot(penguins) + aes(x = bill_depth_mm, y = bill_length_mm,
+           colour = species) +
+            geom_point() + scale_colour_viridis_d()
+
+#Shape: Representing Island
+ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm, colour = species,
+           shape = island)) +
+  geom_point() + scale_colour_viridis_d()
+
+#Shape: Representing Species: Redudant Arrangement 
+ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm, colour = species,
+           shape = species)) +
+  geom_point() + scale_colour_viridis_d()
+
+
+#Size: Body Mass
+ggplot(penguins, aes(x = bill_depth_mm,  y = bill_length_mm, colour = species, shape = species,
+      size = body_mass_g)) +
+  geom_point() + scale_colour_viridis_d()
+
+#Transparency/Alpha
+ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm, colour = species,
+      shape = species, size = body_mass_g, alpha = flipper_length_mm)) +
+  geom_point() + scale_colour_viridis_d()
+
+```
+
+# Mapping versus Setting
+
+```{r, eval=TRUE,echo=TRUE}
+#Mapping 
+ggplot(penguins) +
+  aes(x = bill_depth_mm,
+      y = bill_length_mm,  
+      size = body_mass_g,
+      alpha = flipper_length_mm) +
+  geom_point()
+
+#Setting
+ggplot(penguins) +
+  aes(x = bill_depth_mm,
+      y = bill_length_mm) +
+  geom_point(size = 2, alpha = 0.5)
+```
+
+#Faceting
+```{r, eval=TRUE,echo=TRUE}
+#Facet1
+ggplot(penguins) +
+  aes(x = bill_depth_mm,
+      y = bill_length_mm) +
+  geom_point() +
+  facet_grid(species ~ island)
+
+#Facet2
+ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) + geom_point() +
+  facet_grid(species ~ sex)
+
+#Facet3
+ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) + geom_point() +
+  facet_grid(sex ~ species)
+
+#Facet4
+ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) + geom_point() +
+  facet_wrap(~ species)
+
+#Facet5
+ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) + geom_point() +
+  facet_wrap(~ species, ncol = 2)
+
+#Facet6
+ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) + geom_point() +
+  facet_grid(. ~ species)
+
+#Facet + Colour
+ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm, color = species)) +
+  geom_point() + facet_grid(species ~ sex) + scale_color_viridis_d()
+
+#Facet + Colour:Removing legend
+ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm, color = species)) +
+  geom_point() + facet_grid(species ~ sex) + scale_color_viridis_d() +
+  guides(color = "none")
+```
+
+#Part2- Visualizing numeric variables
+```{r, eval=TRUE,echo=TRUE}
+# Load the package 
+library(openintro)
+
+#Glimpse of the data
+glimpse(loans_full_schema)
+```
+
+#Selecting variables 
+```{r, eval=TRUE,echo=TRUE}
+loans <- loans_full_schema %>%
+  select(loan_amount, interest_rate, term, grade,
+         state, annual_income, homeownership, debt_to_income)
+glimpse(loans)
+```
+
+#Histogram
+```{r, eval=TRUE,echo=TRUE}
+#Creating a histogram
+ggplot(loans) + aes(x = loan_amount) +
+  geom_histogram()
+
+#Changing the binwidth
+ggplot(loans, aes(x = loan_amount)) +
+  geom_histogram(binwidth = 1000)
+
+#Increasing the binwidth
+ggplot(loans, aes(x = loan_amount)) +
+  geom_histogram(binwidth = 5000)
+
+#Increasing the binwidth further
+ggplot(loans, aes(x = loan_amount)) +
+  geom_histogram(binwidth = 20000)
+
+#Customizing the histogram
+ggplot(loans, aes(x = loan_amount)) + geom_histogram(binwidth = 5000) +
+  labs(x = "Loan amount ($)", y = "Frequency", title = "Amounts of Lending Club loans" )
+
+#Changing the colours of the bars through mapping to the values of a categorical variable
+ggplot(loans, aes(x = loan_amount, fill = homeownership)) +
+  geom_histogram(binwidth = 5000, alpha = 0.5) +
+labs(x = "Loan amount ($)",y = "Frequency",title = "Amounts of Lending Club loans")
+
+#Faceting the histogram using the categorical variable
+ggplot(loans, aes(x = loan_amount, fill = homeownership)) + geom_histogram(binwidth = 5000) +
+  labs(x = "Loan amount ($)",y = "Frequency",title = "Amounts of Lending Club loans") +
+  facet_wrap(~ homeownership, nrow = 3)
+```
+
+#Density Plots
+```{r, eval=TRUE,echo=TRUE}
+#Creating the density plot 
+ggplot(loans, aes(x = loan_amount)) +
+  geom_density()
+
+#Adjusting the bandwidth
+ggplot(loans, aes(x = loan_amount)) +
+  geom_density(adjust = 0.5)
+
+#Increasing the bandwidth
+ggplot(loans, aes(x = loan_amount)) +
+  geom_density(adjust = 1)
+
+#Increasing the bandwidth further 
+ggplot(loans, aes(x = loan_amount)) +
+  geom_density(adjust = 2)
+
+#Customization
+ggplot(loans, aes(x = loan_amount)) +
+  geom_density(adjust = 2) +
+  labs( x = "Loan amount ($)", y = "Density", title = "Amounts of Lending Club loans" )
+
+#Adding categorical variable
+ggplot(loans, aes(x = loan_amount, fill = homeownership)) +
+  geom_density(adjust = 2, alpha = 0.5) +
+  labs(x = "Loan amount ($)",y = "Density",title = "Amounts of Lending Club loans", fill = "Homeownership")
+```
+
+#Box Plots 
+
+```{r, eval=TRUE,echo=TRUE}
+#Creating the box plot
+ggplot(loans, aes(x = interest_rate)) +
+  geom_boxplot()
+
+#Showing outliers
+ggplot(loans, aes(x = annual_income)) +
+  geom_boxplot()
+
+#Customization
+ggplot(loans, aes(x = interest_rate)) +geom_boxplot() +labs(x = "Interest rate (%)",y = NULL,
+    title = "Interest rates of Lending Club loans") +
+  theme( axis.ticks.y = element_blank(), axis.text.y = element_blank() )
+
+#Adding categoric variable
+ggplot(loans, aes(x = interest_rate,
+y = grade)) +
+  geom_boxplot() +
+  labs(x = "Interest rate (%)",y = "Grade",title = "Interest rates of Lending Club loans",subtitle="by grade of loan")
+```
+
+#Scatterplot
+```{r, eval=TRUE,echo=TRUE}
+#Creating a scatterplot
+ggplot(loans, aes(x = debt_to_income, y = interest_rate)) +
+  geom_point()
+```
+
+#Hex Plot
+```{r, eval=TRUE,echo=TRUE}
+#Creating a hex plot
+ggplot(loans, aes(x = debt_to_income, y = interest_rate)) +
+  geom_hex()
+
+#Filtering 
+ggplot(loans %>% filter(debt_to_income < 100),
+       aes(x = debt_to_income, y = interest_rate)) +
+geom_hex()
+```
+
+#Visualizing categoric variables
+
+#Bar plot
+```{r, eval=TRUE,echo=TRUE}
+#Creating a bar plot
+ggplot(loans, aes(x = homeownership)) +
+  geom_bar()
+
+#Segmented bar plot
+ggplot(loans, aes(x = homeownership,
+                  fill = grade)) +
+  geom_bar()
+
+#Segmenting for comparison
+ggplot(loans, aes(x = homeownership, fill = grade)) +
+  geom_bar(position = "fill")
+
+#Customizing bar plots
+ggplot(loans, aes(y = homeownership, fill = grade)) + geom_bar(position = "fill") +
+labs( x = "Proportion", y = "Homeownership", fill = "Grade", title = "Grades of Lending Club loans", subtitle="and homeownership of lendee")
+```
+
+#Visualizing variables of more than one type
+
+#Violin Plot
+
+```{r, eval=TRUE,echo=TRUE}
+#Creating a violin plot
+ggplot(loans, aes(x = homeownership, y = loan_amount)) +
+  geom_violin()
+```
+
+#Ridge Plots 
+```{r, eval=TRUE,echo=TRUE}
+#Creating a ridge plot
+library(ggridges)
+ggplot(loans, aes(x = loan_amount, y = grade, fill = grade, color = grade)) +
+  geom_density_ridges(alpha = 0.5)
+```
