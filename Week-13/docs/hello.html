@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>My Personal Homepage - Leaky Pipeline Phenomenon</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">My Personal Homepage</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./UsefulLinks.html" rel="" target="">
+ <span class="menu-text">Useful Links</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./hello.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Leaky Pipeline Phenomenon</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-glass-ceiling-and-leaky-pipeline-lets-talk-about-the-gender-inequality-in-the-workforce." id="toc-the-glass-ceiling-and-leaky-pipeline-lets-talk-about-the-gender-inequality-in-the-workforce." class="nav-link active" data-scroll-target="#the-glass-ceiling-and-leaky-pipeline-lets-talk-about-the-gender-inequality-in-the-workforce.">The Glass Ceiling and Leaky Pipeline: Let’s talk about the gender inequality in the workforce.</a></li>
+  <li><a href="#lets-define-terms" id="toc-lets-define-terms" class="nav-link" data-scroll-target="#lets-define-terms">Let’s define terms</a></li>
+  <li><a href="#why-economics" id="toc-why-economics" class="nav-link" data-scroll-target="#why-economics">Why Economics?</a></li>
+  <li><a href="#what-is-the-change-in-the-share-of-women-all-positions-from-1995-to-2014-in-major-fields" id="toc-what-is-the-change-in-the-share-of-women-all-positions-from-1995-to-2014-in-major-fields" class="nav-link" data-scroll-target="#what-is-the-change-in-the-share-of-women-all-positions-from-1995-to-2014-in-major-fields"><em>What is the change in the share of women (all positions) from 1995 to 2014 in major fields?</em></a></li>
+  <li><a href="#what-is-the-number-of-identified-positions-and-senior-positions-of-women-by-different-types-of-institutions-in-the-field-of-economics" id="toc-what-is-the-number-of-identified-positions-and-senior-positions-of-women-by-different-types-of-institutions-in-the-field-of-economics" class="nav-link" data-scroll-target="#what-is-the-number-of-identified-positions-and-senior-positions-of-women-by-different-types-of-institutions-in-the-field-of-economics"><em>What is the number of identified positions and senior positions of women by different types of institutions in the field of Economics?</em></a></li>
+  <li><a href="#what-is-the-difference-in-share-of-women-at-entry-level-fresh-graduates-entering-the-industry-and-senior-level-by-different-world-regions" id="toc-what-is-the-difference-in-share-of-women-at-entry-level-fresh-graduates-entering-the-industry-and-senior-level-by-different-world-regions" class="nav-link" data-scroll-target="#what-is-the-difference-in-share-of-women-at-entry-level-fresh-graduates-entering-the-industry-and-senior-level-by-different-world-regions"><em>What is the difference in share of women at entry level (fresh graduates entering the industry) and senior level by different world regions?</em></a></li>
+  <li><a href="#do-higher-ranked-institutions-hire-less-women" id="toc-do-higher-ranked-institutions-hire-less-women" class="nav-link" data-scroll-target="#do-higher-ranked-institutions-hire-less-women"><em>Do higher-ranked institutions hire less women?</em></a></li>
+  <li><a href="#is-the-ranking-effect-responsible-for-the-larger-difference-in-share-of-women-at-entry-versus-senior-level-in-the-united-states" id="toc-is-the-ranking-effect-responsible-for-the-larger-difference-in-share-of-women-at-entry-versus-senior-level-in-the-united-states" class="nav-link" data-scroll-target="#is-the-ranking-effect-responsible-for-the-larger-difference-in-share-of-women-at-entry-versus-senior-level-in-the-united-states"><em>Is the ranking effect responsible for the larger difference in share of women at entry versus senior level in the United States?</em></a></li>
+  <li><a href="#given-the-existence-of-the-ranking-effect-is-the-lower-share-of-women-in-the-united-states-and-canada-at-the-senior-level-because-of-more-number-of-high-ranked-institutions-in-the-region" id="toc-given-the-existence-of-the-ranking-effect-is-the-lower-share-of-women-in-the-united-states-and-canada-at-the-senior-level-because-of-more-number-of-high-ranked-institutions-in-the-region" class="nav-link" data-scroll-target="#given-the-existence-of-the-ranking-effect-is-the-lower-share-of-women-in-the-united-states-and-canada-at-the-senior-level-because-of-more-number-of-high-ranked-institutions-in-the-region"><em>Given the existence of the ranking effect, is the lower share of women in the United States and Canada at the senior level because of more number of high-ranked institutions in the region?</em></a></li>
+  <li><a href="#what-is-the-correlation-between-gender-gap-index-and-the-sharenumber-of-women-in-the-workforce" id="toc-what-is-the-correlation-between-gender-gap-index-and-the-sharenumber-of-women-in-the-workforce" class="nav-link" data-scroll-target="#what-is-the-correlation-between-gender-gap-index-and-the-sharenumber-of-women-in-the-workforce"><em>What is the correlation between gender gap index and the share/number of women in the workforce?</em></a></li>
+  <li><a href="#overall-story" id="toc-overall-story" class="nav-link" data-scroll-target="#overall-story">Overall story</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Leaky Pipeline Phenomenon</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p align="center">
+</p><p><img src="heading.png" alt="Alt text" width="800" height="500"></p>
+<p></p>
+<section id="the-glass-ceiling-and-leaky-pipeline-lets-talk-about-the-gender-inequality-in-the-workforce." class="level2">
+<h2 class="anchored" data-anchor-id="the-glass-ceiling-and-leaky-pipeline-lets-talk-about-the-gender-inequality-in-the-workforce.">The Glass Ceiling and Leaky Pipeline: Let’s talk about the gender inequality in the workforce.</h2>
+<p>In the realm of Economics, where analytical prowess needs to be utilized along with the knowledge of societal dynamics, a persistent gender gap remains. Unveiling this gender gap necessitates an exploration of the leaky pipeline phenomenon, reflecting the artificial barriers hampering the ascension of women in the workforce. As we embark on this data-driven journey, the question lingers: what revelations lie beneath the surface?</p>
+<p>We will explore these revelations as to where, why and how they occur. Are these actually related to the existing gender gap in the field of Economics?</p>
+</section>
+<section id="lets-define-terms" class="level2">
+<h2 class="anchored" data-anchor-id="lets-define-terms">Let’s define terms</h2>
+<p>The leaky pipeline is a phenomenon that explains why women disappear as they move up the ranks in their respective fields like a leaky pipeline. There are less number of women at the higher ranks of different fields.</p>
+</section>
+<section id="why-economics" class="level2">
+<h2 class="anchored" data-anchor-id="why-economics">Why Economics?</h2>
+<p>Although this type of gender gap/inequality exists for other fields as well, the inequality is much stronger for economics than in other social sciences. Most researchers at current do realize that women are underrepresented in STEM fields and thus, required measures are starting to be put in place. There is very slow growth for the same in economics and researchers and the general public at large are <strong>not aware of the gap in economics and how slow the change is taking place.</strong></p>
+<ul>
+<li>The gender gap in economics also indicates some general bias in science since economics unlike other social sciences requires and relies heavily on analytical skills and mathematics and statistics.</li>
+</ul>
+<p>It is important to note this gender gap because it is not only for women in the field who endure sexist policies and hostile behaviour but even government policies would be different if more women were involved in the committees who formulated them. Some famous economists even mentioned that <strong>“economics is the worst field to be a woman in.”</strong></p>
+<p>Hence, the field is mostly dominated by men in terms of faculty members in universities or positions in banks, etc, relative to the overall population and relative to other disciplines.</p>
+</section>
+<section id="what-is-the-change-in-the-share-of-women-all-positions-from-1995-to-2014-in-major-fields" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-change-in-the-share-of-women-all-positions-from-1995-to-2014-in-major-fields"><em>What is the change in the share of women (all positions) from 1995 to 2014 in major fields?</em></h2>
+<iframe height="400" width="100%" frameborder="no" src="https://ananditamisram.shinyapps.io/ananditamisramgithub9/">
+</iframe>
+<p>The graph above illustrates the share of women across various fields, encompassing institutions such as universities, laboratories, organizations, and banks, spanning the years from 1995 to 2014. Notably, Economics and Humanities exhibit minimal changes during this period, with Economics sadly maintaining the lowest share of women in both 1995 and 2014. While Business and Management, starting from around the same level as Economics, witnessed a modest increase by 2014, the persistent gender gap in Economics is clear. This graph underscores the urgency of studying the gender dynamics within Economics and delving into the phenomenon of the leaky pipeline. It also serves as a compelling rationale for my choice of the subject of Economics for my data story study. We will see if the leaky pipeline is actually related to the existing gender inequality in the field.</p>
+</section>
+<section id="what-is-the-number-of-identified-positions-and-senior-positions-of-women-by-different-types-of-institutions-in-the-field-of-economics" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-number-of-identified-positions-and-senior-positions-of-women-by-different-types-of-institutions-in-the-field-of-economics"><em>What is the number of identified positions and senior positions of women by different types of institutions in the field of Economics?</em></h2>
+<iframe height="400" width="100%" frameborder="no" src="https://ananditamisram.shinyapps.io/ananditamisramgithub8/">
+</iframe>
+<p>This visualization serves as the most straightforward depiction of the leaky pipeline phenomenon within Economics. Notably, senior positions represent a disproportionately small fraction of the total identified positions held by women across diverse institutions in the field. This contrast highlights a concerning trend: as one ascends the professional hierarchy, the representation of women diminishes significantly in senior positions.</p>
+<iframe height="400" width="100%" frameborder="no" src="https://ananditamisram.shinyapps.io/app7/">
+</iframe>
+<iframe height="400" width="100%" frameborder="no" src="https://ananditamisram.shinyapps.io/ananditamisramgithub6/
+">
+</iframe>
+</section>
+<section id="what-is-the-difference-in-share-of-women-at-entry-level-fresh-graduates-entering-the-industry-and-senior-level-by-different-world-regions" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-difference-in-share-of-women-at-entry-level-fresh-graduates-entering-the-industry-and-senior-level-by-different-world-regions"><em>What is the difference in share of women at entry level (fresh graduates entering the industry) and senior level by different world regions?</em></h2>
+<iframe height="400" width="100%" frameborder="no" src="https://ananditamisra.shinyapps.io/ananditamisramgithub5/">
+</iframe>
+<p>We see a clear difference from the above line graph between the number of women at entry level and senior level. The slope does not represent anything. However, for discrete values, the reason why a line graph was chosen, was to show the difference in share at entry and senior level. The line of senior level can be clearly seen to be below entry level and if not for a line chart, it would have been difficult to visualize this, say with a bar plot. As compared to the previous chart, this further highlights the leaky pipeline since instead of comparing total positions occupied by women, the visualization directly compares women at entry level and women at senior level. Women at senior level is less than women at entry level since they have been leaked out of the pipeline.</p>
+<p>What we also notice here is that, the difference is the largest for the United States + Canada world region group. It is important to further explore this because of the economic position currently held by USA and Canada. There may be specific gender norms, government policies or country-specific confounder that may be causing this. Let’s further explore why is that.</p>
+<p align="center">
+</p><p><img src="middle1.png" alt="Alt text" width="800" height="500"></p>
+<p></p>
+</section>
+<section id="do-higher-ranked-institutions-hire-less-women" class="level2">
+<h2 class="anchored" data-anchor-id="do-higher-ranked-institutions-hire-less-women"><em>Do higher-ranked institutions hire less women?</em></h2>
+<p>Higher-ranked institutions may exhibit a lower propensity to hire women, influenced by the demanding expectations associated with maintaining a robust publication record. This, coupled with the challenges of parenthood, could lead to the attrition of women from these institutions. The stakes are relatively lower at the entry level, where both male and female graduates are presumed to possess comparable research potential.</p>
+<p>So, let’s explore two expectations to understand if the difference in the share of women at entry and senior levels in the USA is because of the higher number of top-ranked institutions. If Expectation 2 is true, we need to delve deeper into the reasons behind it.</p>
+<p><strong>Expectation 1</strong>: Higher-ranked institutions hire women at a comparable rate to lower-ranked institutions across all levels of seniority.</p>
+<p><strong>Expectation 2</strong>: Higher-ranked institutions hire fewer women at the senior level than at the entry level, especially when contrasted with their lower-ranked counterparts.</p>
+<iframe height="400" width="100%" frameborder="no" src="https://ananditamisra.shinyapps.io/ananditamisramgithub4/">
+</iframe>
+<p>The kernel density plots above illustrate a discernible difference in the percentage of women across all levels. At the entry level, the plot exhibits a broader distribution compared to “All positions” or “Senior level.” The peak of the plot for both rank groups aligns at almost the same percentage of women on the x-axis. Conversely, at the Senior level, the density plot peak for the top 119 rank group shifts more towards the left, indicating a lower percentage of women compared to lower-ranked institutions. This means that higher ranked institutions hire less women at the senior level.</p>
+<p>Notice: there is a general reduction in spread in both plots at the senior level, underscoring a diminished share of women in both types of institutions and further emphasizing the presence of a leaky pipeline.</p>
+<p>Hence, our <strong>Expectation 2</strong> turns out to be true. Let’s continue to explore further.</p>
+</section>
+<section id="is-the-ranking-effect-responsible-for-the-larger-difference-in-share-of-women-at-entry-versus-senior-level-in-the-united-states" class="level2">
+<h2 class="anchored" data-anchor-id="is-the-ranking-effect-responsible-for-the-larger-difference-in-share-of-women-at-entry-versus-senior-level-in-the-united-states"><em>Is the ranking effect responsible for the larger difference in share of women at entry versus senior level in the United States?</em></h2>
+<iframe height="400" width="100%" frameborder="no" src="https://ananditamisra.shinyapps.io/ananditamisraMgithub/">
+</iframe>
+<p>In the depicted visualization, kernel density plots are employed to analyze the percentage of women in two country groups: Europe and Great Britain, and the United States of America and Canada. Within each plot, the distinction between the top 119 ranked institutions and the top 120-238 ranked institutions is evident. For Europe and Great Britain, the peaks of the plots at the entry level nearly coincide for the point on the x-axis. Similarly, at the senior level, the peaks of the two plots shift leftward but align closely on the x-axis.</p>
+<p>Notably, in the United States of America and Canada, a marked contrast in the spread of the plot between higher and lower-ranked institutions is observed right from the entry level. Lower-ranked institutions exhibit a larger share of women compared to their higher-ranked counterparts. A compelling observation arises from the senior level graph, where the lower-rank plot displays reduced spread, aligning with expectations of a leaky pipeline. But also notice that a distinct misalignment in the peaks of the two plots is apparent. The higher-rank plot is notably skewed leftward compared to the lower-rank plot, indicating that, in the US+Canada country group, prestigious institutions hire fewer women not only at senior positions but also at the entry level.</p>
+<p>This phenomenon suggests the influence of cultural distinctions and hiring disparities within the academic job market, emphasizing the existence of a ranking effect. The situation appears to indicate that prestigious institutions in the United States set elevated expectations for their female faculty members not only in senior positions but also at the entry level. This phenomenon could be attributed to cultural distinctions and disparities in hiring practices within the academic job market.</p>
+</section>
+<section id="given-the-existence-of-the-ranking-effect-is-the-lower-share-of-women-in-the-united-states-and-canada-at-the-senior-level-because-of-more-number-of-high-ranked-institutions-in-the-region" class="level2">
+<h2 class="anchored" data-anchor-id="given-the-existence-of-the-ranking-effect-is-the-lower-share-of-women-in-the-united-states-and-canada-at-the-senior-level-because-of-more-number-of-high-ranked-institutions-in-the-region"><em>Given the existence of the ranking effect, is the lower share of women in the United States and Canada at the senior level because of more number of high-ranked institutions in the region?</em></h2>
+<iframe height="400" width="100%" frameborder="no" src="https://ananditam.shinyapps.io/app2/">
+</iframe>
+<p>The preceding visualization substantiates the existence of ranking effects, particularly accentuated in the United States and Canada in comparison to Europe and Great Britain. However, a pertinent question arises: is this phenomenon attributed to the greater concentration of higher-ranked institutions in the United States and Canada? Analyzing the data presented, it becomes apparent that the US+Canada region is more prominently featured in the top-ranked institutions (top 50, top 100). Conversely, as we expand our consideration to include a larger number of lower-ranked institutions, Europe+Great Britain emerges as better represented, specifically in the top 238 institutions. Consequently, the heightened ranking effect in the US+Canada region can be attributed to the excellence characterized by a greater presence of higher-ranked institutions in the region.</p>
+</section>
+<section id="what-is-the-correlation-between-gender-gap-index-and-the-sharenumber-of-women-in-the-workforce" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-correlation-between-gender-gap-index-and-the-sharenumber-of-women-in-the-workforce"><em>What is the correlation between gender gap index and the share/number of women in the workforce?</em></h2>
+<iframe height="400" width="100%" frameborder="no" src="https://ananditamisra.shinyapps.io/app3/">
+</iframe>
+<p>The observed trends across countries, as depicted in the third visualization, consistently reveal a higher share of women at the entry level compared to the senior level. This pattern is corroborated by the second visualization, indicating a notable contrast between the proportion of women in all positions versus senior positions. The nuanced distinctions between the Europe and Great Britain country group and the United States and Canada country group may be attributed to unique features of gender inequality within each region.</p>
+<ul>
+<li><p>In delving deeper into the intricacies of gender dynamics, the Global Gender Gap Index provided by the World Economic Forum becomes a valuable metric. This index assigns rankings to countries based on their performance in gender-related indicators, offering comprehensive insights into the share of women in both all positions and senior positions across diverse nations.</p></li>
+<li><p>The dataset had ranks for each country according to the Global Gender Gap Index and had ranks for the share of women in all positions and senior positions. Now, the above visualization shows the correlation between the gender gap index rank of the countries and the rank of the share of women.</p></li>
+<li><p>Examining the correlation, a substantial 58% exists for senior positions, surpassing the 41% correlation for all positions. This heightened correlation, particularly in the context of senior positions, underscores the pervasive impact of gender inequality, vividly illustrating the challenges posed by the leaky pipeline phenomenon.</p></li>
+</ul>
+<p align="center">
+</p><p><img src="middle3.png" alt="Alt text" width="800" height="500"></p>
+<p></p>
+<section id="all-in-all-we-saw-why-where-and-how-the-leaky-pipeline-emerges--it-is-correlated-as-we-expected-to-the-country-specific-ranks-of-societal-and-institutional-barriers-and-is-seen-more-in-higher-ranked-institutions.-since-there-are-more-number-of-higher-ranked-institutions-in-usa-and-canada-the-leaky-pipeline-is-much-more-apparent-in-those-regions." class="level5">
+<h5 class="anchored" data-anchor-id="all-in-all-we-saw-why-where-and-how-the-leaky-pipeline-emerges--it-is-correlated-as-we-expected-to-the-country-specific-ranks-of-societal-and-institutional-barriers-and-is-seen-more-in-higher-ranked-institutions.-since-there-are-more-number-of-higher-ranked-institutions-in-usa-and-canada-the-leaky-pipeline-is-much-more-apparent-in-those-regions."><strong>All in all, we saw why, where and how the leaky pipeline emerges- it is correlated as we expected to the country specific ranks of societal and institutional barriers and is seen more in higher-ranked institutions. Since, there are more number of higher-ranked institutions in USA and Canada, the leaky pipeline is much more apparent in those regions.</strong></h5>
+<p align="center">
+</p><p><img src="middle2.png" alt="Alt text" width="800" height="500"></p>
+<p></p>
+</section>
+</section>
+<section id="overall-story" class="level2">
+<h2 class="anchored" data-anchor-id="overall-story">Overall story</h2>
+<p>Let’s go back to the start- our question- where, why and how they occur. Are these actually related to the existing gender gap in the field of Economics?</p>
+<ul>
+<li>Where: Starkly in USA+Canada regions</li>
+<li>Why: Ranking effects because of expectation 2 being true. More top-ranked institutions in the above regions. - How: Societal and institutional barriers. Economics sees a stronger correlation with the overall gender gap index for senior level.</li>
+<li>Actually related to the existing gender gap in the field of Economics since the correlation 1) is greater for senior level than entry level 2) the gender gap index ranks are based on existing gender gap indices of the respective regions</li>
+</ul>
+<p>In Economics, the gender gap, exemplified by the leaky pipeline, persists, driven by societal biases and institutional barriers.</p>
+<p><em>Data from 1995 to 2014 shows minimal progress, urging a closer examination of the glass ceiling inhibiting women’s advancement. The stark contrast in women’s representation at entry and senior levels, especially in the United States and Canada, prompts exploration of cultural and policy dynamics. Higher-ranked institutions hiring fewer women at senior levels raises questions about academic expectations. Linking these insights to the Global Gender Gap Index emphasizes the correlation between gender inequality and women’s underrepresentation in senior positions. This narrative will conclude with a call to action for economic growth through gender equality, stressing the need to repair the leaky pipeline.</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Social conditioning eliminated] --&gt; D(Output)
+  B(Gender pay equality) --&gt; D{Output}
+  C(More economic opportunities for women) --&gt; D{Output}
+  D --&gt; E[Economic growth potential]
+  D --&gt; F[Labour efficiency]
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>The overarching flowchart presents a roadmap toward eliminating social conditioning, achieving gender pay equality, providing more economic opportunities for women, enhancing labor efficiency, and ultimately contributing to economic growth. McKinsey &amp; Company’s report projects a potential $12 trillion addition to global GDP by 2025 through advancing women’s equality—a testament to the untapped potential awaiting recognition and utilization in the workforce.</p>
+<p><strong>Economic Growth Potential:</strong></p>
+<p>According to a report by McKinsey &amp; Company, advancing women’s equality and reducing the gender gap in the workplace could add $12 trillion to global GDP by 2025. There is a lot of potential in women who are getting educated and shifting to the workfield- it is important to recognize and utilize the potential to add to the labor productivity in the economy.</p>
+<p><strong>Labor Market Efficiency:</strong></p>
+<p>According to the World Economic Forum’s Global Gender Gap Report 2020, reducing gender disparity in the workplace can improve labor market efficiency, contributing to economic growth. This means that workers should be allocated based on skills, qualifications and merit rather than gender/sex, resulting in more optimum use of human resources. This efficiency will then translate into greater productivity and economic growth, because companies and industries will operate at their full potential.</p>
+<p><strong>Reducing Income Inequality:</strong></p>
+<p>The gender pay gap remains a significant issue in all fields. In the United States, women earned about only 82 cents for each dollar earned by men in the year of 2020, according to the U.S. Bureau of Labor Statistics. The glass ceiling and leaky pipeline phenomenon often contribute to this gender wage gap. By addressing these two issues, we can actually work to reduce income inequality. By not holding women back in their careers due to social conditioning, by systemic changes in mindset, they can progress to higher-paying roles and it will have a direct impact on narrowing the gender pay gap.</p>
+<p><em>In addressing the glass ceiling and plugging the leaky pipeline, not only do we pave the way for more equitable workplaces, but we also contribute to reducing income inequality and improving labor market efficiency. The journey through the data underscores the significance of systemic changes, emphasizing the need to recognize and harness the potential within women to maximize labor productivity and foster a more inclusive, prosperous economic future.</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+  
+
+website:
+  title: "My Personal Homepage"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - UsefulLinks.qmd
+      - hello.qmd
+ 
+
+format:
+  html:
+    theme: "pulse"
+    css: styles.css
+    toc: true
+    backgroundcolor: "lavender"
+editor: visual
+
